@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grout & Glory Tile Co. | Custom Tile Installation — Asheville, NC</title>
+<meta name="description" content="Grout & Glory is Asheville's premier custom tile installation studio. Bathrooms, kitchens, showers, mosaics, and flooring — handcrafted with precision.">
+<link rel="canonical" href="https://www.groutandglory.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.groutandglory.com/">
+<meta property="og:title" content="Grout & Glory Tile Co. | Asheville, NC">
+<meta property="og:description" content="Custom tile installation for high-end homes in Asheville, NC.">
+<meta property="og:image" content="https://www.groutandglory.com/og-image.jpg">
+<meta property="og:site_name" content="Grout & Glory Tile Co.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Grout & Glory Tile Co. | Asheville, NC">
+<meta name="twitter:description" content="Custom tile installation for high-end homes in Asheville, NC.">
+<meta name="twitter:image" content="https://www.groutandglory.com/og-image.jpg">
+<meta name="theme-color" content="#F2EDE6">
+<link rel="preload" href="fonts/Chillax-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Satoshi-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Chillax';src:url('fonts/Chillax-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Chillax';src:url('fonts/Chillax-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Chillax';src:url('fonts/Chillax-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('fonts/Zodiak-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('fonts/Zodiak-Italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('fonts/Zodiak-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Satoshi';src:url('fonts/Satoshi-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Satoshi';src:url('fonts/Satoshi-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+</style>
+
+<link rel="stylesheet" href="styles.css">
+<style>
+*{-webkit-font-smoothing:antialiased;box-sizing:border-box;margin:0;padding:0;}
+body{background:#F2EDE6;color:#141210;cursor:none;font-family:'Zodiak',serif;}
+.cursor{position:fixed;width:10px;height:10px;background:#FF4ECD;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s;}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1px solid #FF4ECD;border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:0.5;transition:width .25s,height .25s,opacity .25s;}
+.cursor-ring.exp{width:56px;height:56px;opacity:0.2;}
+.section-label::before{content:'';display:inline-block;width:24px;height:1px;background:#FF4ECD;margin-right:1rem;vertical-align:middle;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:none;}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+nav{transition:background .3s,border-color .3s;position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;}
+nav.scrolled{background:rgba(242,237,230,.94);backdrop-filter:blur(12px);border-bottom:1px solid #D4CEC7;}
+.hero-h1{font-size:clamp(54px,9vw,118px);line-height:.92;letter-spacing:-.03em;font-family:'Chillax',sans-serif;font-weight:700;}
+
+/* Tile animation */
+.tile-wrap{display:inline-block;vertical-align:baseline;position:relative;overflow:visible;margin-bottom:-0.08em;}
+.real-letter{position:absolute;font-family:'Chillax',sans-serif;font-weight:700;line-height:0.92;color:#141210;white-space:nowrap;opacity:0;pointer-events:none;}
+.t-tile{fill:#141210;stroke:#F2EDE6;stroke-width:2;opacity:0;}
+.t-tile.laid{animation:tileIn 0.32s cubic-bezier(0.22,1.45,0.36,1) forwards;}
+@keyframes tileIn{0%{opacity:0;transform:translateY(-14px) scale(0.72);}55%{opacity:1;transform:translateY(3px) scale(1.06);}78%{transform:translateY(-1px) scale(0.975);}100%{opacity:1;transform:translateY(0) scale(1);}}
+.t-tile.scatter{animation:tileOut 0.5s cubic-bezier(0.4,0,1,1) forwards !important;}
+@keyframes tileOut{0%{opacity:1;transform:translateY(0) scale(1);}100%{opacity:0;transform:translateY(var(--dy)) translateX(var(--dx)) scale(0.3) rotate(var(--rot));}}
+.hl-line{display:block;opacity:0;transform:translateY(6px);transition:opacity 0.45s ease,transform 0.45s ease;}
+.hl-line.in{opacity:1;transform:none;}
+
+/* Swatch bands */
+.swatch-band{position:relative;overflow:hidden;height:200px;display:flex;align-items:center;border-bottom:1px solid #D4CEC7;transition:height .4s ease;cursor:none;}
+.swatch-band:hover{height:290px;}
+.swatch-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.38) saturate(.5);transition:filter .5s,transform .6s;}
+.swatch-band:hover .swatch-bg{filter:brightness(.52) saturate(.75);transform:scale(1.03);}
+.swatch-content{position:relative;z-index:2;display:flex;align-items:center;gap:2rem;width:100%;padding:0 3rem;}
+.swatch-num{font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;color:#FF4ECD;min-width:1.5rem;flex-shrink:0;}
+.swatch-title{font-family:'Chillax',sans-serif;font-weight:600;font-size:clamp(1.8rem,4.5vw,4rem);color:#F2EDE6;letter-spacing:-.02em;line-height:1;flex:1;}
+.swatch-cta{font-family:'Satoshi',sans-serif;font-size:.65rem;letter-spacing:.15em;color:#F2EDE6;opacity:0;transition:opacity .3s;flex-shrink:0;}
+.swatch-band:hover .swatch-cta{opacity:.6;}
+
+/* Portfolio */
+.port-card{overflow:hidden;position:relative;aspect-ratio:4/3;}
+.port-img{filter:saturate(.4);transition:filter .5s,transform .6s;width:100%;height:100%;object-fit:cover;display:block;}
+.port-card:hover .port-img{filter:saturate(1);transform:scale(1.04);}
+.port-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,18,16,.9) 0%,transparent 55%);transform:translateY(100%);transition:transform .4s;display:flex;align-items:flex-end;padding:1.5rem 2rem;}
+.port-card:hover .port-overlay{transform:none;}
+
+/* Process */
+.process-line{position:absolute;top:0;left:0;width:0;height:2px;background:#FF4ECD;transition:width .4s;}
+.process-step:hover .process-line{width:100%;}
+.process-num{font-family:'Chillax',sans-serif;font-size:3.5rem;font-weight:700;color:#D4CEC7;line-height:1;transition:color .3s;margin-bottom:1.5rem;}
+.process-step:hover .process-num{color:#FF4ECD;}
+
+/* Mobile nav */
+.mobile-nav{position:fixed;top:0;right:-100%;width:min(320px,85vw);height:100vh;z-index:500;background:#141210;border-left:1px solid #2E2B28;display:flex;flex-direction:column;transition:right .35s cubic-bezier(.4,0,.2,1);padding:2rem;}
+.mobile-nav.open{right:0;}
+.mob-overlay{display:none;position:fixed;inset:0;background:rgba(20,18,16,.5);z-index:400;}
+.mob-overlay.open{display:block;}
+
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.run-marquee{animation:marquee 22s linear infinite;display:flex;white-space:nowrap;}
+@keyframes marquee-vert{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+.vert-track{animation:marquee-vert 40s linear infinite;display:flex;flex-direction:column;align-items:center;}
+
+/* Departures board */
+.depart-slide{position:absolute;width:100%;top:0;left:0;display:flex;flex-direction:column;justify-content:center;height:100%;transition:transform .45s cubic-bezier(.4,0,.2,1),opacity .45s ease;}
+.depart-slide.active{transform:translateY(0);opacity:1;}
+.depart-slide.above{transform:translateY(-100%);opacity:0;}
+.depart-slide.below{transform:translateY(100%);opacity:0;}
+.depart-num{font-family:'Chillax',sans-serif;font-weight:700;color:#FF4ECD;line-height:.9;letter-spacing:-.02em;}
+.depart-label{font-family:'Satoshi',sans-serif;font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:#7A7169;margin-top:.35rem;}
+.depart-copy{font-family:'Zodiak',serif;font-style:italic;color:#141210;line-height:1.3;}
+
+input,textarea{outline:none;transition:border-color .2s;}
+input:focus,textarea:focus{border-color:#FF4ECD!important;}
+
+@media(max-width:768px){
+  /* Base */
+  html,body{overflow-x:hidden;}
+  body{cursor:auto;}
+  .cursor,.cursor-ring{display:none;}
+  a,button{cursor:pointer;}
+  .desk{display:none!important;}
+  .mob{display:flex!important;}
+
+  /* Vertical marquee */
+  #vert-marquee{display:none!important;}
+
+  /* Hero text visible immediately on mobile — no JS lag */
+  .hl-line{opacity:1!important;transform:none!important;}
+  #hl-line1{display:block;}
+
+  /* Hero */
+  .hero-content{max-width:100%!important;padding-right:0!important;}
+  #main-content > section:first-child{padding:6rem 1.5rem 0;min-height:auto;}
+  #hero-footer{grid-template-columns:1fr 1fr!important;}
+  #hero-footer .photo-cell{display:none!important;}
+  #hero-cell-2{padding:1.25rem 1rem!important;}
+  #hero-cell-3{padding:1.25rem 1rem!important;}
+
+  /* Process — 2 col on mobile, no overflow */
+  #process > div:last-child{grid-template-columns:1fr 1fr!important;}
+  .process-step{border-right:none!important;border-bottom:1px solid #D4CEC7;}
+
+  /* Video section — stack vertically */
+  #video-section{padding:4rem 1.5rem!important;}
+  #video-section > div{grid-template-columns:1fr!important;gap:2.5rem!important;}
+  #video-section h2{font-size:clamp(28px,8vw,42px)!important;}
+
+  /* Portfolio mobile — fade up on scroll, tap overlay via JS */
+  #work{padding:4rem 1.5rem!important;}
+  #work > div:last-child{grid-template-columns:1fr!important;}
+  .port-card{opacity:0;transform:translateY(36px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.3,1);}
+  .port-card.mob-visible{opacity:1;transform:translateY(0);}
+  .port-card.d1.mob-visible{transition-delay:.15s;}
+  .port-card.d2.mob-visible{transition-delay:.3s;}
+  .port-card.d3.mob-visible{transition-delay:.45s;}
+  .port-overlay{transform:translateY(100%)!important;transition:transform .35s ease!important;opacity:1;}
+  .port-card.tapped .port-overlay{transform:translateY(0)!important;}
+  .port-img{filter:saturate(.8)!important;}
+
+  /* Swatch bands — bold slide from left, staggered */
+  .swatch-band{opacity:0;transform:translateX(-50px);transition:height .3s ease,opacity .5s ease,transform .5s cubic-bezier(.2,.8,.3,1)!important;height:140px!important;transition-delay:0s!important;}
+  .swatch-band.d1{transition-delay:.1s!important;}
+  .swatch-band.d2{transition-delay:.2s!important;}
+  .swatch-band.d3{transition-delay:.3s!important;}
+  .swatch-band.d4{transition-delay:.4s!important;}
+  .swatch-band.visible{opacity:1!important;transform:translateX(0)!important;}
+  .swatch-band.swatch-expanded{height:220px!important;}
+  .swatch-content{padding:0 1.5rem!important;}
+
+  /* About — stack */
+  #about-section{padding:4rem 1.5rem!important;}
+  #about-section > div{grid-template-columns:1fr!important;gap:2.5rem!important;}
+  #about-section img{max-height:none !important;}
+  #about-section .portrait-wrap{aspect-ratio:unset !important;height:420px;}
+
+  /* Contact — stack */
+  #contact{padding:4rem 1.5rem!important;}
+  #contact > div{grid-template-columns:1fr!important;gap:2.5rem!important;}
+
+  /* General section padding */
+  section{padding-left:1.5rem!important;padding-right:1.5rem!important;}
+  .swatch-band,.swatch-bg{width:100%;}
+}
+@media(min-width:769px){.mob{display:none!important;}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Grout & Glory Tile Co.","url":"https://www.groutandglory.com","address":{"@type":"PostalAddress","addressLocality":"Asheville","addressRegion":"NC"},"description":"Custom tile installation for high-end homes in Asheville, NC.","telephone":"+1-828-555-0191"}
+</script>
+</head>
+<body class="bg-linen text-ink font-zodiak leading-relaxed">
+
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="ring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1.2rem;color:#141210;text-decoration:none;" class="desk">Grout &amp; Glory</a>
+  <a href="#" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1rem;color:#141210;text-decoration:none;" class="mob">Grout &amp; Glory</a>
+  <div class="desk" style="display:flex;align-items:center;gap:2.5rem;">
+    <a href="#work" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Work</a>
+    <a href="#services" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Services</a>
+    <a href="#process" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Process</a>
+    <a href="#contact" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Contact</a>
+    <a href="#contact" style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#F2EDE6;padding:.75rem 2rem;text-decoration:none;">Book a Call</a>
+  </div>
+  <button id="hbg" class="mob" style="flex-direction:column;gap:5px;padding:10px 12px;background:none;border:1px solid #D4CEC7;cursor:pointer;" aria-label="Open menu">
+    <span style="display:block;width:22px;height:1px;background:#141210;"></span>
+    <span style="display:block;width:22px;height:1px;background:#141210;"></span>
+    <span style="display:block;width:14px;height:1px;background:#141210;"></span>
+  </button>
+</nav>
+
+<div class="mobile-nav" id="mnav">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3rem;">
+    <span style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1.2rem;color:#F2EDE6;">Grout &amp; Glory</span>
+    <button id="cnav" style="font-family:'Satoshi',sans-serif;font-size:.9rem;color:#7A7169;background:none;border:none;" aria-label="Close">&#x2715;</button>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:1.5rem;">
+    <a href="#work" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Work</a>
+    <a href="#services" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Services</a>
+    <a href="#process" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Process</a>
+    <a href="#contact" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Contact</a>
+    <a href="#contact" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;background:#FF4ECD;color:#141210;padding:1rem 2rem;text-decoration:none;display:block;text-align:center;margin-top:.5rem;" onclick="cmnav()">Book a Call</a>
+  </div>
+</div>
+<div class="mob-overlay" id="movl" onclick="cmnav()"></div>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section style="min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:8rem 3rem 0;border-bottom:1px solid #D4CEC7;position:relative;">
+  <div class="hero-content" style="flex:1;display:flex;flex-direction:column;justify-content:center;max-width:62%;padding-right:2rem;">
+    <div class="section-label reveal" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.35em;text-transform:uppercase;color:#7A7169;margin-bottom:2rem;display:flex;align-items:center;">Asheville, NC — Custom Tile Installation</div>
+    <h1 class="hero-h1" id="heroHeadline">
+      <span id="hl-line1" style="display:block;"></span>
+      <em class="hl-line" id="hl-line2" style="color:#FF4ECD;font-style:italic;font-family:'Zodiak',serif;">Worth</em>
+      <span class="hl-line" id="hl-line3">Talking About.</span>
+    </h1>
+    <p class="reveal d2" style="font-size:.95rem;color:#7A7169;line-height:1.85;margin-top:2rem;max-width:400px;">Marcus Tully installs custom tile in Asheville's finest homes. Bathrooms, kitchens, showers, mosaics. One crew. No corners cut.</p>
+  </div>
+  <div id="hero-footer" style="display:grid;grid-template-columns:2fr 1fr 1fr;border-top:1px solid #D4CEC7;margin-top:4rem;">
+
+    <!-- Cell 1 — raw full-color photo, full bleed to left edge -->
+    <div class="reveal photo-cell" style="position:relative;overflow:hidden;border-right:1px solid #D4CEC7;min-height:160px;margin-left:-3rem;">
+      <img src="images/hero-footer.jpg" alt="Tile installation detail" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+
+    <!-- Cell 2 — CTAs with ink hover wipe -->
+    <div id="hero-cell-2" class="reveal d1 cta-cell" style="position:relative;overflow:hidden;padding:2rem 1.5rem;border-right:1px solid #D4CEC7;display:flex;flex-direction:column;gap:.75rem;justify-content:center;transition:background .35s ease;">
+      <div class="cta-wipe" style="position:absolute;inset:0;background:#141210;transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.4,0,.2,1);pointer-events:none;"></div>
+      <a href="#work" class="cta-primary" onclick="event.preventDefault();this.closest('.cta-cell').dispatchEvent(new MouseEvent('mouseenter'));setTimeout(()=>window.location.hash='#work',360);" style="position:relative;z-index:1;font-family:'Satoshi',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#F2EDE6;padding:.75rem 1rem;text-decoration:none;text-align:center;display:block;transition:background .35s,color .35s;">See Our Work</a>
+      <a href="#contact" class="cta-ghost" style="position:relative;z-index:1;font-family:'Satoshi',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#141210;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:.5rem;opacity:.55;transition:color .35s,opacity .35s;">Book a Call &#8594;</a>
+    </div>
+
+    <!-- Cell 3 — departures board, plain linen -->
+    <div id="hero-cell-3" class="reveal d2" style="padding:2rem 1.5rem;background:#F2EDE6;overflow:hidden;display:flex;align-items:center;">
+      <div id="depart-window" style="width:100%;overflow:hidden;position:relative;height:3.8rem;">
+        <!-- Slides injected by JS -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Vertical marquee -->
+  <div id="vert-marquee" style="position:absolute;top:0;left:0;width:2.5rem;border-left:1px solid #D4CEC7;border-right:1px solid #D4CEC7;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#1C1A18;">
+    <div class="vert-track"><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Bathroom Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Kitchen Backsplash</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Custom Mosaics</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Shower Systems</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Flooring</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Outdoor Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Bathroom Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Kitchen Backsplash</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Custom Mosaics</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Shower Systems</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Flooring</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Outdoor Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Bathroom Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Kitchen Backsplash</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Custom Mosaics</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Shower Systems</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Flooring</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Outdoor Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Bathroom Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Kitchen Backsplash</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Custom Mosaics</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Shower Systems</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Flooring</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Outdoor Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Bathroom Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Kitchen Backsplash</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Custom Mosaics</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Shower Systems</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Flooring</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Outdoor Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Bathroom Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Kitchen Backsplash</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Custom Mosaics</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Shower Systems</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Flooring</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Outdoor Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Bathroom Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Kitchen Backsplash</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Custom Mosaics</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Shower Systems</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Flooring</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Outdoor Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Bathroom Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Kitchen Backsplash</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Custom Mosaics</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Shower Systems</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Flooring</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span><span style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:#FF4ECD;padding:.75rem 0;">Outdoor Tile</span><span style="writing-mode:vertical-rl;font-size:.5rem;color:#FF4ECD;padding:.2rem 0;opacity:.4;">·</span></div>
+  </div>
+</section>
+
+<!-- MOBILE MARQUEE — hidden on desktop, shown on mobile -->
+<div class="mob" style="padding:1.25rem 0;border-bottom:1px solid #D4CEC7;overflow:hidden;background:#141210;">
+  <div class="run-marquee">
+    <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(242,237,230,.5);padding:0 2rem;">Bathroom Tile</span><span style="color:#FF4ECD;padding:0 .5rem;">&#183;</span>
+    <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(242,237,230,.5);padding:0 2rem;">Kitchen Backsplash</span><span style="color:#FF4ECD;padding:0 .5rem;">&#183;</span>
+    <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(242,237,230,.5);padding:0 2rem;">Custom Mosaics</span><span style="color:#FF4ECD;padding:0 .5rem;">&#183;</span>
+    <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(242,237,230,.5);padding:0 2rem;">Shower Systems</span><span style="color:#FF4ECD;padding:0 .5rem;">&#183;</span>
+    <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(242,237,230,.5);padding:0 2rem;">Flooring</span><span style="color:#FF4ECD;padding:0 .5rem;">&#183;</span>
+    <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(242,237,230,.5);padding:0 2rem;">Outdoor Tile</span><span style="color:#FF4ECD;padding:0 .5rem;">&#183;</span>
+    <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(242,237,230,.5);padding:0 2rem;">Bathroom Tile</span><span style="color:#FF4ECD;padding:0 .5rem;">&#183;</span>
+    <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(242,237,230,.5);padding:0 2rem;">Kitchen Backsplash</span><span style="color:#FF4ECD;padding:0 .5rem;">&#183;</span>
+    <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(242,237,230,.5);padding:0 2rem;">Custom Mosaics</span><span style="color:#FF4ECD;padding:0 .5rem;">&#183;</span>
+    <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(242,237,230,.5);padding:0 2rem;">Shower Systems</span><span style="color:#FF4ECD;padding:0 .5rem;">&#183;</span>
+    <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(242,237,230,.5);padding:0 2rem;">Flooring</span><span style="color:#FF4ECD;padding:0 .5rem;">&#183;</span>
+    <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(242,237,230,.5);padding:0 2rem;">Outdoor Tile</span><span style="color:#FF4ECD;padding:0 .5rem;">&#183;</span>
+  </div>
+</div>
+
+<!-- VIDEO REEL -->
+<section id="video-section" style="padding:7rem 3rem;border-bottom:1px solid #D4CEC7;background:#141210;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+    <div>
+      <div class="section-label reveal" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.35em;text-transform:uppercase;color:#FF4ECD;margin-bottom:1.5rem;display:flex;align-items:center;">Project Reel</div>
+      <h2 class="reveal d1" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:clamp(28px,4vw,54px);line-height:.95;letter-spacing:-.02em;color:#F2EDE6;">Before &amp; After.<br>Every Time.</h2>
+      <p class="reveal d2" style="font-size:.92rem;color:#7A7169;line-height:1.85;margin-top:1.5rem;">Thirty seconds. One transformation. Every project reel shows exactly what Marcus does — raw space in, finished installation out. No narration needed.</p>
+      <a href="#contact" class="reveal d3" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#FF4ECD;text-decoration:none;display:flex;align-items:center;gap:.75rem;margin-top:2rem;">Get Your Reel &#8594;</a>
+    </div>
+    <div class="reveal d2">
+      <div style="position:relative;aspect-ratio:16/9;background:#1C1A18;border:1px solid #2E2B28;overflow:hidden;">
+          <img src="images/video-thumbnail.jpg" alt="Before & After project reel" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;inset:0;background:rgba(20,18,16,.35);"></div>
+          <!-- Prototype notice overlay -->
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;background:rgba(20,18,16,.55);backdrop-filter:blur(2px);">
+            <div style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(242,237,230,.5);border:1px solid rgba(242,237,230,.15);padding:.6rem 1.25rem;">Prototype Site</div>
+            <div style="font-family:'Zodiak',serif;font-style:italic;font-size:.95rem;color:rgba(242,237,230,.6);text-align:center;max-width:260px;line-height:1.6;">Video intentionally disabled — this is a design prototype.</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="work" style="padding:7rem 3rem;border-bottom:1px solid #D4CEC7;background:#E8E2DA;">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;">
+    <div>
+      <div class="section-label reveal" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.35em;text-transform:uppercase;color:#FF4ECD;margin-bottom:1.5rem;display:flex;align-items:center;">Portfolio</div>
+      <h2 class="reveal d1" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:clamp(28px,4vw,54px);line-height:.95;letter-spacing:-.02em;color:#141210;">Selected Work</h2>
+    </div>
+    <a href="#contact" class="reveal d2 desk" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">View All &#8594;</a>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:#D4CEC7;">
+    <div class="port-card reveal"><img src="images/portfolio-bath.jpg" alt="Master bathroom" loading="lazy" decoding="async" class="port-img"><div class="port-overlay"><div><div style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#FF4ECD;margin-bottom:.5rem;">Bathroom</div><div style="font-family:'Chillax',sans-serif;font-size:1.2rem;font-weight:600;color:#F2EDE6;">Highland Ave Master Bath</div></div></div></div>
+    <div class="port-card reveal d1"><img src="images/portfolio-kitchen.jpg" alt="Kitchen backsplash" loading="lazy" decoding="async" class="port-img"><div class="port-overlay"><div><div style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#FF4ECD;margin-bottom:.5rem;">Kitchen</div><div style="font-family:'Chillax',sans-serif;font-size:1.2rem;font-weight:600;color:#F2EDE6;">Biltmore Estate Kitchen</div></div></div></div>
+    <div class="port-card reveal d2"><img src="images/portfolio-mosaic.jpg" alt="Custom mosaic" loading="lazy" decoding="async" class="port-img"><div class="port-overlay"><div><div style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#FF4ECD;margin-bottom:.5rem;">Mosaic</div><div style="font-family:'Chillax',sans-serif;font-size:1.2rem;font-weight:600;color:#F2EDE6;">Grove Park Entry Mosaic</div></div></div></div>
+    <div class="port-card reveal d3"><img src="images/portfolio-shower.jpg" alt="Shower system" loading="lazy" decoding="async" class="port-img"><div class="port-overlay"><div><div style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#FF4ECD;margin-bottom:.5rem;">Shower</div><div style="font-family:'Chillax',sans-serif;font-size:1.2rem;font-weight:600;color:#F2EDE6;">Luxury Walk-In Shower</div></div></div></div>
+  </div>
+</section>
+
+<!-- SERVICES — Swatch Bands -->
+<section id="services" style="border-bottom:1px solid #D4CEC7;">
+  <div style="padding:4rem 3rem;border-bottom:1px solid #D4CEC7;">
+    <div class="section-label reveal" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.35em;text-transform:uppercase;color:#FF4ECD;margin-bottom:1.5rem;display:flex;align-items:center;">Services</div>
+    <h2 class="reveal d1" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:clamp(36px,5vw,72px);line-height:.95;letter-spacing:-.02em;color:#141210;">What We Install</h2>
+  </div>
+  <div class="swatch-band reveal"><div class="swatch-bg" style="background:#3d2b1f url('images/swatch-bathroom.jpg') center/cover;"></div><div class="swatch-content"><span class="swatch-num">01</span><span class="swatch-title">Bathroom Tile</span><span class="swatch-cta">Explore &#8594;</span></div></div>
+  <div class="swatch-band reveal d1"><div class="swatch-bg" style="background:#1f2b2a url('images/swatch-kitchen.jpg') center/cover;"></div><div class="swatch-content"><span class="swatch-num">02</span><span class="swatch-title">Kitchen Backsplash</span><span class="swatch-cta">Explore &#8594;</span></div></div>
+  <div class="swatch-band reveal d2"><div class="swatch-bg" style="background:#2b1f2b url('images/swatch-mosaic.jpg') center/cover;"></div><div class="swatch-content"><span class="swatch-num">03</span><span class="swatch-title">Custom Mosaics</span><span class="swatch-cta">Explore &#8594;</span></div></div>
+  <div class="swatch-band reveal d3"><div class="swatch-bg" style="background:#1a2030 url('images/swatch-shower.jpg') center/cover;"></div><div class="swatch-content"><span class="swatch-num">04</span><span class="swatch-title">Shower Systems</span><span class="swatch-cta">Explore &#8594;</span></div></div>
+  <div class="swatch-band reveal d4"><div class="swatch-bg" style="background:#2a2218 url('images/swatch-flooring.jpg') center/cover;"></div><div class="swatch-content"><span class="swatch-num">05</span><span class="swatch-title">Flooring</span><span class="swatch-cta">Explore &#8594;</span></div></div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" style="border-bottom:1px solid #D4CEC7;background:#F2EDE6;">
+  <div style="padding:4rem 3rem;border-bottom:1px solid #D4CEC7;">
+    <div class="section-label reveal" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.35em;text-transform:uppercase;color:#FF4ECD;margin-bottom:1.5rem;display:flex;align-items:center;">How It Works</div>
+    <h2 class="reveal d1" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:clamp(28px,4vw,54px);line-height:.95;letter-spacing:-.02em;color:#141210;">The Process</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);">
+    <div class="process-step reveal" style="position:relative;padding:2.5rem;border-right:1px solid #D4CEC7;"><div class="process-line"></div><div class="process-num">01</div><div style="font-family:'Chillax',sans-serif;font-size:1rem;font-weight:600;color:#141210;margin-bottom:.75rem;">Site Visit</div><div style="font-size:.82rem;color:#7A7169;line-height:1.75;">Marcus walks the space personally. No junior reps, no phone estimates.</div></div>
+    <div class="process-step reveal d1" style="position:relative;padding:2.5rem;border-right:1px solid #D4CEC7;"><div class="process-line"></div><div class="process-num">02</div><div style="font-family:'Chillax',sans-serif;font-size:1rem;font-weight:600;color:#141210;margin-bottom:.75rem;">Material Selection</div><div style="font-size:.82rem;color:#7A7169;line-height:1.75;">He guides you to the right tile — not the most expensive, the most right.</div></div>
+    <div class="process-step reveal d2" style="position:relative;padding:2.5rem;border-right:1px solid #D4CEC7;"><div class="process-line"></div><div class="process-num">03</div><div style="font-family:'Chillax',sans-serif;font-size:1rem;font-weight:600;color:#141210;margin-bottom:.75rem;">Installation</div><div style="font-size:.82rem;color:#7A7169;line-height:1.75;">Marcus and his apprentice do the work. Every cut exact. Every line true.</div></div>
+    <div class="process-step reveal d3" style="position:relative;padding:2.5rem;"><div class="process-line"></div><div class="process-num">04</div><div style="font-family:'Chillax',sans-serif;font-size:1rem;font-weight:600;color:#141210;margin-bottom:.75rem;">Final Walkthrough</div><div style="font-size:.82rem;color:#7A7169;line-height:1.75;">You see everything before we leave. If it isn't right, we fix it. No exceptions.</div></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about-section" style="padding:7rem 3rem;border-bottom:1px solid #D4CEC7;background:#E8E2DA;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+    <div>
+      <div class="section-label reveal" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.35em;text-transform:uppercase;color:#FF4ECD;margin-bottom:1.5rem;display:flex;align-items:center;">About</div>
+      <h2 class="reveal d1" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:clamp(28px,4vw,54px);line-height:.95;letter-spacing:-.02em;color:#141210;">Built on<br><em style="color:#FF4ECD;font-style:italic;font-family:'Zodiak',serif;">Craft.</em><br>Not Volume.</h2>
+      <p class="reveal d2" style="font-size:.92rem;color:#7A7169;line-height:1.85;margin-top:1.5rem;">Marcus Tully spent seven years studying fine arts before picking up a trowel. That background shows in every job — an eye for proportion, pattern, and detail that most tile guys simply don't have.</p>
+      <p class="reveal d3" style="font-size:.92rem;color:#7A7169;line-height:1.85;margin-top:1rem;">Grout &amp; Glory takes fewer jobs so each one gets full attention. If you want it fast and cheap, we're not your crew. If you want it done right — the kind of right that still looks good in twenty years — let's talk.</p>
+      <div class="reveal d4" style="display:flex;gap:3rem;margin-top:2.5rem;">
+        <div><div style="font-family:'Chillax',sans-serif;font-size:2rem;font-weight:700;color:#FF4ECD;line-height:1;margin-bottom:.3rem;">340+</div><div style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Projects Completed</div></div>
+        <div><div style="font-family:'Chillax',sans-serif;font-size:2rem;font-weight:700;color:#FF4ECD;line-height:1;margin-bottom:.3rem;">14</div><div style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Years in Asheville</div></div>
+      </div>
+    </div>
+    <div class="reveal d2"><div class="portrait-wrap" style="aspect-ratio:3/4;overflow:hidden;border:1px solid #D4CEC7;"><img src="images/marcus-portrait.jpg" alt="Marcus Tully — Owner & Lead Installer" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding:7rem 3rem;border-bottom:1px solid #D4CEC7;background:#F2EDE6;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;">
+    <div>
+      <div class="section-label reveal" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.35em;text-transform:uppercase;color:#FF4ECD;margin-bottom:1.5rem;display:flex;align-items:center;">Contact</div>
+      <h2 class="reveal d1" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:clamp(28px,4vw,54px);line-height:.95;letter-spacing:-.02em;color:#141210;">Start Your<br>Project.</h2>
+      <p class="reveal d2" style="font-size:.92rem;color:#7A7169;line-height:1.85;margin-top:1.5rem;max-width:340px;">Tell us about your space. Marcus responds personally within one business day.</p>
+      <div class="reveal d3" style="display:flex;flex-direction:column;gap:1rem;margin-top:2.5rem;">
+        <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;display:flex;align-items:center;gap:.75rem;cursor:default;" title="Prototype — link disabled"><span style="display:inline-block;width:16px;height:1px;background:#FF4ECD;"></span>marcus@groutandglory.com</span>
+        <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;display:flex;align-items:center;gap:.75rem;cursor:default;" title="Prototype — link disabled"><span style="display:inline-block;width:16px;height:1px;background:#FF4ECD;"></span>(828) 555-0191</span>
+        <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#FF4ECD;color:#141210;padding:1rem 2rem;text-align:center;display:inline-block;margin-top:.5rem;opacity:.5;cursor:default;" title="Prototype — link disabled">Book a Call on Calendly &#8594;</span>
+      </div>
+    </div>
+    <div class="reveal d2">
+      <form style="display:flex;flex-direction:column;gap:1.5rem;">
+        <div style="display:flex;flex-direction:column;gap:.5rem;"><label style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Your Name</label><input type="text" placeholder="First & Last" style="background:transparent;border:none;border-bottom:1px solid #D4CEC7;border-radius:0;color:#141210;font-family:'Zodiak',serif;font-size:.9rem;padding:.75rem 0;width:100%;"></div>
+        <div style="display:flex;flex-direction:column;gap:.5rem;"><label style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Email Address</label><input type="email" placeholder="you@email.com" style="background:transparent;border:none;border-bottom:1px solid #D4CEC7;border-radius:0;font-family:'Zodiak',serif;font-size:.9rem;padding:.75rem 0;width:100%;color:#141210;"></div>
+        <div style="display:flex;flex-direction:column;gap:.5rem;"><label style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Project Type</label><input type="text" placeholder="e.g. Master bath, kitchen backsplash..." style="background:transparent;border:none;border-bottom:1px solid #D4CEC7;border-radius:0;font-family:'Zodiak',serif;font-size:.9rem;padding:.75rem 0;width:100%;color:#141210;"></div>
+        <div style="display:flex;flex-direction:column;gap:.5rem;"><label style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Tell Us About Your Project</label><textarea rows="4" placeholder="Space size, timeline, tile preferences..." style="background:transparent;border:none;border-bottom:1px solid #D4CEC7;border-radius:0;font-family:'Zodiak',serif;font-size:.9rem;padding:.75rem 0;width:100%;color:#141210;resize:none;"></textarea></div>
+        <button type="button" disabled style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#F2EDE6;padding:1rem 2rem;border:none;text-align:left;cursor:default;opacity:.5;" title="Prototype — link disabled">Send Message &#8594;</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="padding:3rem;background:#141210;border-top:1px solid #D4CEC7;">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;">
+    <div>
+      <div style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1.2rem;color:#F2EDE6;margin-bottom:.3rem;">Grout &amp; Glory Tile Co.</div>
+      <div style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Asheville, NC — Handcrafted Tile Installation</div>
+    </div>
+    <div style="display:flex;gap:2rem;">
+      <a href="#work" style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Work</a>
+      <a href="#services" style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Services</a>
+      <a href="#contact" style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Contact</a>
+    </div>
+    <div style="font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:#3a3632;">Site by <a href="https://thewaydma.com" style="color:#3a3632;text-decoration:none;">The Way Digital</a></div>
+  </div>
+</footer>
+
+<script>
+// ── Tile headline animation ───────────────────────────────────────────────
+const TILE_SZ=14,GROUT=2.5,TILE_UNIT=TILE_SZ+GROUT,TILE_DELAY=52;
+const NS='http://www.w3.org/2000/svg';
+
+function tileHLMeasure(char,fs,ff,fw){
+  const c=document.createElement('canvas');
+  c.width=fs*3;c.height=fs*2;
+  const ctx=c.getContext('2d');
+  ctx.font=`${fw} ${fs}px '${ff}'`;
+  const m=ctx.measureText(char);
+  return{ascent:m.actualBoundingBoxAscent,descent:m.actualBoundingBoxDescent,lsb:m.actualBoundingBoxLeft,width:m.actualBoundingBoxRight+m.actualBoundingBoxLeft};
+}
+
+function buildTileSVG(char,fs,ff,fw,met){
+  const{ascent,descent,lsb,width}=met;
+  const pad=2;
+  const svgW=Math.ceil(width+pad*2),svgH=Math.ceil(ascent+descent+pad*2);
+  const uid=`cp_${char}_${Date.now()}`;
+  const svg=document.createElementNS(NS,'svg');
+  svg.setAttribute('width',svgW);svg.setAttribute('height',svgH);
+  svg.setAttribute('viewBox',`0 0 ${svgW} ${svgH}`);
+  svg.style.cssText='display:block;overflow:visible;position:absolute;top:0;left:0;';
+  const defs=document.createElementNS(NS,'defs');
+  const clip=document.createElementNS(NS,'clipPath');
+  clip.setAttribute('id',uid);
+  const ct=document.createElementNS(NS,'text');
+  ct.setAttribute('font-family',`'${ff}'`);ct.setAttribute('font-weight',fw);
+  ct.setAttribute('font-size',fs);ct.setAttribute('x',lsb+pad);ct.setAttribute('y',ascent+pad);
+  ct.textContent=char;clip.appendChild(ct);defs.appendChild(clip);svg.appendChild(defs);
+  const g=document.createElementNS(NS,'g');
+  g.setAttribute('clip-path',`url(#${uid})`);
+  const cols=Math.ceil(svgW/TILE_UNIT)+1,rows=Math.ceil(svgH/TILE_UNIT)+1,tiles=[];
+  for(let r=0;r<rows;r++)for(let c2=0;c2<cols;c2++){
+    const rect=document.createElementNS(NS,'rect');
+    rect.setAttribute('x',c2*TILE_UNIT);rect.setAttribute('y',r*TILE_UNIT);
+    rect.setAttribute('width',TILE_SZ);rect.setAttribute('height',TILE_SZ);rect.setAttribute('rx','1');
+    rect.classList.add('t-tile');g.appendChild(rect);tiles.push(rect);
+  }
+  svg.appendChild(g);
+  tiles.sort((a,b)=>(parseFloat(a.getAttribute('y'))+parseFloat(a.getAttribute('x'))*0.15)-(parseFloat(b.getAttribute('y'))+parseFloat(b.getAttribute('x'))*0.15));
+  return{svg,tiles,svgW,svgH};
+}
+
+function tileDissolve(tiles,svg,real){
+  const cx=parseFloat(svg.getAttribute('width'))/2,cy=parseFloat(svg.getAttribute('height'))/2;
+  tiles.forEach(tile=>{
+    const tx=parseFloat(tile.getAttribute('x'))+TILE_SZ/2,ty=parseFloat(tile.getAttribute('y'))+TILE_SZ/2;
+    const dx=(tx-cx)*1.8+(Math.random()-.5)*20,dy=(ty-cy)*1.8+(Math.random()-.5)*20;
+    const rot=(Math.random()-.5)*40,dist=Math.sqrt((tx-cx)**2+(ty-cy)**2);
+    tile.style.setProperty('--dx',dx.toFixed(1)+'px');
+    tile.style.setProperty('--dy',dy.toFixed(1)+'px');
+    tile.style.setProperty('--rot',rot.toFixed(1)+'deg');
+    setTimeout(()=>tile.classList.add('scatter'),(dist/100)*60);
+  });
+  setTimeout(()=>{real.style.transition='opacity 0.45s ease';real.style.opacity='1';setTimeout(()=>svg.style.visibility='hidden',600);},80);
+}
+
+function resetTileHeadline(){
+  // Clear any injected content from hl-line1 so animation can rerun cleanly
+  const line1=document.getElementById('hl-line1');
+  if(line1) line1.innerHTML='';
+  // Remove .in from lines 2 & 3 then re-add (force reflow so transition re-fires)
+  const l2=document.getElementById('hl-line2'),l3=document.getElementById('hl-line3');
+  if(l2){l2.classList.remove('in');void l2.offsetWidth;l2.classList.add('in');}
+  if(l3){l3.classList.remove('in');void l3.offsetWidth;l3.classList.add('in');}
+}
+
+function runTileHeadline(){
+  // Skip on mobile — show headline instantly, no font wait
+  if(window.innerWidth <= 768){
+    const line1=document.getElementById('hl-line1');
+    if(line1 && !line1.textContent.trim()){
+      const span=document.createElement('span');span.textContent='Tile Work';line1.appendChild(span);
+    }
+    document.getElementById('hl-line2')?.classList.add('in');
+    document.getElementById('hl-line3')?.classList.add('in');
+    return;
+  }
+
+  const primer=document.createElement('span');
+  primer.style.cssText="position:fixed;top:-9999px;visibility:hidden;font-family:'Chillax',sans-serif;font-weight:700;font-size:200px;";
+  primer.textContent='TW';
+  document.body.appendChild(primer);
+
+  document.fonts.load("700 200px 'Chillax'").then(()=>
+  document.fonts.ready.then(()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    document.body.removeChild(primer);
+    const hl=document.getElementById('heroHeadline');
+    const fs=parseFloat(getComputedStyle(hl).fontSize);
+    const ff='Chillax',fw='700';
+
+    const metT=tileHLMeasure('T',fs,ff,fw);
+    const metW=tileHLMeasure('W',fs,ff,fw);
+    const{svg:svgT,tiles:tilesT,svgW:wT,svgH:hT}=buildTileSVG('T',fs,ff,fw,metT);
+    const{svg:svgW2,tiles:tilesW,svgW:wW,svgH:hW}=buildTileSVG('W',fs,ff,fw,metW);
+
+    function makeWrap(svg,svgW,svgH,char){
+      const wrap=document.createElement('span');
+      wrap.className='tile-wrap';wrap.style.width=svgW+'px';wrap.style.height=svgH+'px';
+      wrap.appendChild(svg);
+      const real=document.createElement('span');
+      real.className='real-letter';real.style.fontSize=fs+'px';real.textContent=char;
+      wrap.appendChild(real);
+      return{wrap,real};
+    }
+
+    const{wrap:wrapT,real:realT}=makeWrap(svgT,wT,hT,'T');
+    const{wrap:wrapW,real:realW}=makeWrap(svgW2,wW,hW,'W');
+
+    // 'ile' and 'ork' visible immediately
+    const ile=document.createElement('span');ile.textContent='ile';
+    const ork=document.createElement('span');ork.textContent='ork';
+
+    const word1=document.createElement('span');
+    word1.appendChild(wrapT);word1.appendChild(ile);
+    const spc=document.createElement('span');spc.innerHTML=' ';
+    const word2=document.createElement('span');
+    word2.appendChild(wrapW);word2.appendChild(ork);
+
+    const line1=document.getElementById('hl-line1');
+    line1.appendChild(word1);line1.appendChild(spc);line1.appendChild(word2);
+
+    // Lines 2 & 3 visible immediately
+    document.getElementById('hl-line2').classList.add('in');
+    document.getElementById('hl-line3').classList.add('in');
+
+    // Position real letters
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      const refSpan=document.createElement('span');
+      refSpan.style.cssText=`position:absolute;visibility:hidden;font-family:'Chillax',sans-serif;font-weight:700;font-size:${fs}px;line-height:0.92;letter-spacing:-0.03em;`;
+      refSpan.textContent='T';
+      line1.appendChild(refSpan);
+      requestAnimationFrame(()=>{
+        const wrapTRect=wrapT.getBoundingClientRect();
+        const wrapWRect=wrapW.getBoundingClientRect();
+        const refRect=refSpan.getBoundingClientRect();
+        line1.removeChild(refSpan);
+        realT.style.top=(refRect.top-wrapTRect.top).toFixed(1)+'px';realT.style.left='0';
+        realW.style.top=(refRect.top-wrapWRect.top).toFixed(1)+'px';realW.style.left='0';
+
+        // Step 1: Build T
+        const tCount=tilesT.length;
+        tilesT.forEach((t,i)=>setTimeout(()=>t.classList.add('laid'),300+i*TILE_DELAY));
+        const tDone=300+tCount*TILE_DELAY+150;
+
+        // Step 2: Build W after T finishes (T stays in tile form)
+        const wStart=tDone+200;
+        const wCount=tilesW.length;
+        tilesW.forEach((t,i)=>setTimeout(()=>t.classList.add('laid'),wStart+i*TILE_DELAY));
+        const wDone=wStart+wCount*TILE_DELAY+150;
+
+        // Step 3: Both dissolve together once W is fully built
+        setTimeout(()=>tileDissolve(tilesT,svgT,realT),wDone);
+        setTimeout(()=>tileDissolve(tilesW,svgW2,realW),wDone+80);
+      });
+    }));
+  }))));
+}
+
+window.addEventListener('load',()=>runTileHeadline());
+
+// Debounced resize — teardown and rerun so T/W always match current font size
+let _tileResizeTimer=null;
+window.addEventListener('resize',()=>{
+  clearTimeout(_tileResizeTimer);
+  _tileResizeTimer=setTimeout(()=>{
+    resetTileHeadline();
+    runTileHeadline();
+  },220);
+});
+
+// ── CTA cell hover wipe ───────────────────────────────────────────────────
+(function(){
+  const cell = document.querySelector('.cta-cell');
+  if(!cell) return;
+  const wipe = cell.querySelector('.cta-wipe');
+  const primary = cell.querySelector('.cta-primary');
+  const ghost = cell.querySelector('.cta-ghost');
+  cell.addEventListener('mouseenter', () => {
+    wipe.style.transform = 'scaleX(1)';
+    primary.style.background = '#FF4ECD';
+    primary.style.color = '#141210';
+    ghost.style.color = '#F2EDE6';
+    ghost.style.opacity = '0.7';
+  });
+  cell.addEventListener('mouseleave', () => {
+    wipe.style.transform = 'scaleX(0)';
+    primary.style.background = '#141210';
+    primary.style.color = '#F2EDE6';
+    ghost.style.color = '#141210';
+    ghost.style.opacity = '0.55';
+  });
+})();
+
+// ── Departures board ─────────────────────────────────────────────────────
+(function(){
+  const slides = [
+    { type:'stat', num:'340+', label:'Projects Completed' },
+    { type:'stat', num:'100%', label:'Owner-Operated' },
+    { type:'copy', text:'One crew.\nNo shortcuts.' },
+    { type:'stat', num:'14+',  label:'Years Installing' },
+    { type:'copy', text:'Every job treated\nlike a commission.' },
+  ];
+  const win = document.getElementById('depart-window');
+  if(!win) return;
+
+  // Build slides
+  slides.forEach((s, i) => {
+    const el = document.createElement('div');
+    el.className = 'depart-slide ' + (i === 0 ? 'active' : 'below');
+    if(s.type === 'stat'){
+      el.innerHTML = `<div class="depart-num" style="font-size:clamp(1.6rem,3vw,2.4rem);">${s.num}</div><div class="depart-label">${s.label}</div>`;
+    } else {
+      el.innerHTML = `<div class="depart-copy" style="font-size:clamp(.85rem,1.4vw,1.05rem);">${s.text.replace('\n','<br>')}</div>`;
+    }
+    win.appendChild(el);
+  });
+
+  let current = 0;
+  function advance(){
+    const els = win.querySelectorAll('.depart-slide');
+    els[current].className = 'depart-slide above';
+    current = (current + 1) % slides.length;
+    // set incoming from below
+    els[current].className = 'depart-slide below';
+    // force reflow so transition fires
+    els[current].getBoundingClientRect();
+    els[current].className = 'depart-slide active';
+  }
+  setInterval(advance, 3200);
+})();
+
+// Set vertical marquee bottom to align with hero footer top border
+function positionVertMarquee() {
+  const footer = document.getElementById('hero-footer');
+  const marquee = document.getElementById('vert-marquee');
+  const cell2 = document.getElementById('hero-cell-2');
+  const section = footer && footer.closest('section');
+  if (!footer || !marquee || !section || !cell2) return;
+
+  // Bottom: align marquee bottom with top of footer grid
+  const sectionRect = section.getBoundingClientRect();
+  const footerRect = footer.getBoundingClientRect();
+  const bottomVal = sectionRect.bottom - footerRect.top;
+  marquee.style.bottom = bottomVal + 'px';
+
+  // Left: align marquee LEFT edge with left edge of cell 2 (= right edge of cell 1)
+  const cell2Rect = cell2.getBoundingClientRect();
+  const leftVal = cell2Rect.left - sectionRect.left;
+  marquee.style.left = leftVal + 'px';
+}
+window.addEventListener('load', positionVertMarquee);
+window.addEventListener('resize', positionVertMarquee);
+
+if(window.innerWidth <= 768){
+  // Delay observer so elements aren't already "in view" on register
+  setTimeout(()=>{
+    const portIO = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('mob-visible');
+      });
+    },{threshold:0.1});
+    document.querySelectorAll('.port-card').forEach(card=>{
+      portIO.observe(card);
+    });
+  }, 100);
+
+  // Tap to reveal overlay — touchstart shows, touchend on outside hides
+  document.querySelectorAll('.port-card').forEach(card=>{
+    card.addEventListener('touchstart',()=>{
+      document.querySelectorAll('.port-card').forEach(c=>c.classList.remove('tapped'));
+      card.classList.add('tapped');
+    },{passive:true});
+  });
+  document.addEventListener('touchstart',e=>{
+    if(!e.target.closest('.port-card')){
+      document.querySelectorAll('.port-card').forEach(c=>c.classList.remove('tapped'));
+    }
+  },{passive:true});
+
+  // Swatch tap to expand — toggle on tap, collapse others
+  document.querySelectorAll('.swatch-band').forEach(band=>{
+    band.addEventListener('touchstart',()=>{
+      const isExpanded = band.classList.contains('swatch-expanded');
+      document.querySelectorAll('.swatch-band').forEach(b=>b.classList.remove('swatch-expanded'));
+      if(!isExpanded) band.classList.add('swatch-expanded');
+    },{passive:true});
+  });
+}
+
+// ── Cursor ────────────────────────────────────────────────────────────────
+const cur=document.getElementById('cur'),ring=document.getElementById('ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('exp'));el.addEventListener('mouseleave',()=>ring.classList.remove('exp'));});
+
+// ── Nav scroll ────────────────────────────────────────────────────────────
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+
+// ── Scroll reveal ─────────────────────────────────────────────────────────
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ── Mobile nav ────────────────────────────────────────────────────────────
+const hbg=document.getElementById('hbg'),mnav=document.getElementById('mnav'),movl=document.getElementById('movl'),cnav=document.getElementById('cnav');
+function omnav(){mnav.classList.add('open');movl.classList.add('open');document.body.style.overflow='hidden';}
+function cmnav(){mnav.classList.remove('open');movl.classList.remove('open');document.body.style.overflow='';}
+if(hbg)hbg.addEventListener('click',omnav);
+if(cnav)cnav.addEventListener('click',cmnav);
+</script>
+</body>
+</html>
