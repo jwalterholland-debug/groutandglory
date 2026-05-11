@@ -2,20 +2,99 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog | Grout & Glory Tile Co.</title>
+<title>From the Studio | Grout & Glory Tile Co.</title>
 <meta name="description" content="Tips, insights, and advice from Grout & Glory Tile Co..">
-<link rel="canonical" href="https://www.groutandglory.com/blog/">
+<link rel="canonical" href="https://thewaydma.co/blog/">
+@font-face{font-family:'Chillax';src:url('https://www.groutandglory.com/fonts/Chillax-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Chillax';src:url('https://www.groutandglory.com/fonts/Chillax-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Chillax';src:url('https://www.groutandglory.com/fonts/Chillax-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('https://www.groutandglory.com/fonts/Zodiak-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('https://www.groutandglory.com/fonts/Zodiak-Italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('https://www.groutandglory.com/fonts/Zodiak-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Satoshi';src:url('https://www.groutandglory.com/fonts/Satoshi-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Satoshi';src:url('https://www.groutandglory.com/fonts/Satoshi-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#F2EDE6;}
+body{background:#F2EDE6;color:#141210;font-family:'Zodiak',serif;}
 
-<link rel="preload" href="fonts/Chillax-Bold.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/Satoshi-Medium.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Chillax';src:url('fonts/Chillax-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}@font-face{font-family:'Chillax';src:url('fonts/Chillax-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}@font-face{font-family:'Chillax';src:url('fonts/Chillax-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}@font-face{font-family:'Zodiak';src:url('fonts/Zodiak-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}@font-face{font-family:'Zodiak';src:url('fonts/Zodiak-Italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}@font-face{font-family:'Zodiak';src:url('fonts/Zodiak-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}@font-face{font-family:'Satoshi';src:url('fonts/Satoshi-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}@font-face{font-family:'Satoshi';src:url('fonts/Satoshi-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}</style>
+.post-container{max-width:760px;margin:0 auto;padding:8rem 3rem 4rem;}
+
+.post-header{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid #D4CEC7;}
+
+.post-title{font-family:'Chillax',sans-serif;font-weight:700;font-size:clamp(36px,6vw,68px);color:#141210;line-height:.95;letter-spacing:-.03em;margin-bottom:1.5rem;}
+
+.post-excerpt{font-size:1.05rem;color:#7A7169;line-height:1.75;font-style:italic;}
+
+.post-body{line-height:1.8;}
+
+.post-body h2{font-family:'Chillax',sans-serif;font-weight:600;font-size:1.8rem;color:#141210;line-height:1.2;letter-spacing:-.02em;margin:3rem 0 1.5rem;padding-bottom:1rem;border-bottom:1px solid #D4CEC7;}
+
+.post-body p{font-size:1rem;color:#141210;margin-bottom:1.5rem;}
+
+.post-body strong{color:#141210;font-weight:700;}
+
+.post-body ul,.post-body ol{margin:1.5rem 0;padding-left:2rem;}
+
+.post-body li{margin-bottom:.75rem;color:#141210;}
+
+.post-body a.post-link{color:#FF4ECD;text-decoration:underline;text-underline-offset:3px;}
+
+.post-cta{background:#E8E2DA;border:1px solid #D4CEC7;padding:2.5rem;margin:4rem 0;}
+
+.post-cta h3{font-family:'Chillax',sans-serif;font-weight:600;font-size:1.5rem;color:#141210;line-height:1.2;margin-bottom:1rem;}
+
+.post-cta p{color:#7A7169;line-height:1.75;margin-bottom:1.5rem;}
+
+.post-cta-btn{font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#F2EDE6;padding:.75rem 2rem;text-decoration:none;display:inline-block;}
+
+.post-back a{color:#7A7169;opacity:.7;font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;}
+
+@media(max-width:768px){
+.post-container{padding:6rem 1.5rem 3rem;}
+.post-title{font-size:clamp(28px,8vw,42px);}
+.post-cta{padding:2rem 1.5rem;}
+}
+@media(max-width:768px){body{cursor:auto;}}
+</style>
 </head>
 <body class="bg-linen text-ink font-zodiak leading-relaxed">
-<nav id="nav"><a href="#" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1.2rem;color:#141210;text-decoration:none;" class="desk">Grout &amp; Glory</a><a href="#" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1rem;color:#141210;text-decoration:none;" class="mob">Grout &amp; Glory</a><div class="desk" style="display:flex;align-items:center;gap:2.5rem;"><a href="#work" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Work</a><a href="#services" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Services</a><a href="#process" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Process</a><a href="/blog/" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">From the Studio</a><a href="#contact" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Contact</a><a href="#contact" style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#F2EDE6;padding:.75rem 2rem;text-decoration:none;">Book a Call</a></div><button id="hbg" class="mob" style="flex-direction:column;gap:5px;padding:10px 12px;background:none;border:1px solid #D4CEC7;cursor:pointer;" aria-label="Open menu"><span style="display:block;width:22px;height:1px;background:#141210;"></span><span style="display:block;width:22px;height:1px;background:#141210;"></span><span style="display:block;width:14px;height:1px;background:#141210;"></span></button></nav>
+<nav id="nav">
+  <a href="#" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1.2rem;color:#141210;text-decoration:none;" class="desk">Grout &amp; Glory</a>
+  <a href="#" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1rem;color:#141210;text-decoration:none;" class="mob">Grout &amp; Glory</a>
+  <div class="desk" style="display:flex;align-items:center;gap:2.5rem;">
+    <a href="#work" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Work</a>
+    <a href="#services" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Services</a>
+    <a href="#process" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Process</a>
+    <a href="/blog/" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">From the Studio</a>
+    <a href="#contact" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Contact</a>
+    <a href="#contact" style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#F2EDE6;padding:.75rem 2rem;text-decoration:none;">Book a Call</a>
+  </div>
+  <button id="hbg" class="mob" style="flex-direction:column;gap:5px;padding:10px 12px;background:none;border:1px solid #D4CEC7;cursor:pointer;" aria-label="Open menu">
+    <span style="display:block;width:22px;height:1px;background:#141210;"></span>
+    <span style="display:block;width:22px;height:1px;background:#141210;"></span>
+    <span style="display:block;width:14px;height:1px;background:#141210;"></span>
+  </button>
+</nav>
+<div class="mobile-nav" id="mnav">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3rem;">
+    <span style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1.2rem;color:#F2EDE6;">Grout &amp; Glory</span>
+    <button id="cnav" style="font-family:'Satoshi',sans-serif;font-size:.9rem;color:#7A7169;background:none;border:none;" aria-label="Close">&#x2715;</button>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:1.5rem;">
+    <a href="#work" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Work</a>
+    <a href="#services" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Services</a>
+    <a href="#process" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Process</a>
+    <a href="/blog/" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">From the Studio</a>
+    <a href="#contact" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Contact</a>
+    <a href="#contact" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;background:#FF4ECD;color:#141210;padding:1rem 2rem;text-decoration:none;display:block;text-align:center;margin-top:.5rem;" onclick="cmnav()">Book a Call</a>
+  </div>
+</div>
 <main style="padding:8rem 3rem 6rem;max-width:1100px;margin:0 auto;">
-  <h1 style="font-size:clamp(2rem,5vw,4rem);margin-bottom:3rem;">From The Field</h1>
+  <h1 style="font-size:clamp(2rem,5vw,4rem);margin-bottom:3rem;">From the Studio</h1>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;">
     
-    <a href="/blog/choose-tile-installer-asheville-nc-guide/" style="text-decoration:none;display:flex;flex-direction:column;gap:0.75rem;padding:2rem;border:1px solid #eee;transition:border-color 0.2s;" onmouseenter="this.style.borderColor='currentColor'" onmouseleave="this.style.borderColor='#eee'">
+    <a href="/blog/choose-tile-installer-asheville-nc-guide/" style="text-decoration:none;display:flex;flex-direction:column;gap:0.75rem;padding:2rem;border:1px solid rgba(0,0,0,0.1);transition:border-color 0.2s;" onmouseenter="this.style.borderColor='currentColor'" onmouseleave="this.style.borderColor='rgba(0,0,0,0.1)'">
       <img src="/blog/choose-tile-installer-asheville-nc-guide/hero.webp" alt="Professional tile installer carefully placing subway tiles on bathroom wall during Asheville home renovation" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;">
       <div style="font-size:0.7rem;opacity:0.5;text-transform:uppercase;letter-spacing:0.1em;">Insights · May 2026</div>
       <div style="font-size:1.1rem;font-weight:600;line-height:1.2;">How to Choose the Right Tile Installer in Asheville NC: Complete Homeowner's Guide</div>
@@ -25,5 +104,9 @@
   </div>
 </main>
 
+<script>
+const nav=document.querySelector('nav');
+if(nav){window.addEventListener('scroll',()=>{if(window.scrollY>60){nav.style.background='rgba(255,255,255,0.95)';nav.style.backdropFilter='blur(12px)';}else{nav.style.background='';nav.style.backdropFilter='';}});}
+</script>
 </body>
 </html>
