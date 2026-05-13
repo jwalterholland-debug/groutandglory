@@ -736,5 +736,35 @@ function cmnav(){mnav.classList.remove('open');movl.classList.remove('open');doc
 if(hbg)hbg.addEventListener('click',omnav);
 if(cnav)cnav.addEventListener('click',cmnav);
 </script>
+<!-- Calendly booking tracking -->
+<script>
+  // Track when someone completes a Calendly booking
+  window.addEventListener('message', function(e) {
+    if (e.data.event && e.data.event === 'calendly.event_scheduled') {
+      gtag('event', 'calendly_booked', {
+        event_category: 'conversion'
+      });
+    }
+  });
+
+  // Track Calendly link clicks (anchor tags)
+  document.querySelectorAll('a[href*="calendly.com"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      gtag('event', 'calendly_click', {
+        event_category: 'engagement',
+        event_label: link.href
+      });
+    });
+  });
+  // Track Calendly popup button clicks
+  document.querySelectorAll('[onclick*="Calendly.initPopupWidget"]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      gtag('event', 'calendly_click', {
+        event_category: 'engagement',
+        event_label: 'Calendly Popup'
+      });
+    });
+  });
+</script>
 </body>
 </html>
