@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Message Received — Grout & Glory Tile Co.</title>
+<meta name="description" content="Thanks for reaching out to Grout & Glory. Marcus will be in touch within one business day.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F2EDE6">
+<link rel="preload" href="fonts/Chillax-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Satoshi-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Chillax';src:url('fonts/Chillax-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Chillax';src:url('fonts/Chillax-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Chillax';src:url('fonts/Chillax-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('fonts/Zodiak-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('fonts/Zodiak-Italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('fonts/Zodiak-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Satoshi';src:url('fonts/Satoshi-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Satoshi';src:url('fonts/Satoshi-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+
+*{-webkit-font-smoothing:antialiased;box-sizing:border-box;margin:0;padding:0;}
+body{background:#F2EDE6;color:#141210;cursor:none;font-family:'Zodiak',serif;min-height:100vh;display:flex;flex-direction:column;}
+
+.cursor{position:fixed;width:10px;height:10px;background:#FF4ECD;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s;}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1px solid #FF4ECD;border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:0.5;transition:width .25s,height .25s,opacity .25s;}
+.cursor-ring.exp{width:56px;height:56px;opacity:0.2;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(242,237,230,.94);backdrop-filter:blur(12px);border-bottom:1px solid #D4CEC7;}
+
+/* Tile grid background */
+.tile-bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;}
+.tile-bg svg{width:100%;height:100%;}
+
+/* Main content */
+.thanks-wrap{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:10rem 3rem 6rem;max-width:900px;}
+
+.section-label{font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.35em;text-transform:uppercase;color:#7A7169;margin-bottom:2rem;display:flex;align-items:center;}
+.section-label::before{content:'';display:inline-block;width:24px;height:1px;background:#FF4ECD;margin-right:1rem;vertical-align:middle;}
+
+.thanks-heading{font-family:'Chillax',sans-serif;font-weight:700;font-size:clamp(54px,9vw,118px);line-height:.92;letter-spacing:-.03em;color:#141210;opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease;}
+.thanks-heading.in{opacity:1;transform:none;}
+.thanks-heading em{color:#FF4ECD;font-style:italic;font-family:'Zodiak',serif;}
+
+.thanks-body{font-size:.95rem;color:#7A7169;line-height:1.85;margin-top:2.5rem;max-width:420px;opacity:0;transform:translateY(20px);transition:opacity .7s ease .25s,transform .7s ease .25s;}
+.thanks-body.in{opacity:1;transform:none;}
+
+.thanks-divider{width:48px;height:1px;background:#FF4ECD;margin:2.5rem 0;opacity:0;transition:opacity .6s ease .4s;}
+.thanks-divider.in{opacity:1;}
+
+.thanks-detail{font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;line-height:2.2;opacity:0;transform:translateY(12px);transition:opacity .6s ease .5s,transform .6s ease .5s;}
+.thanks-detail.in{opacity:1;transform:none;}
+.thanks-detail span{color:#141210;}
+
+.thanks-actions{display:flex;gap:1rem;margin-top:3rem;flex-wrap:wrap;opacity:0;transform:translateY(12px);transition:opacity .6s ease .6s,transform .6s ease .6s;}
+.thanks-actions.in{opacity:1;transform:none;}
+
+.btn-primary{font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#F2EDE6;padding:1rem 2rem;text-decoration:none;display:inline-block;transition:background .25s,color .25s;}
+.btn-primary:hover{background:#FF4ECD;color:#141210;}
+
+.btn-ghost{font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#141210;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;padding:1rem 0;opacity:.5;transition:opacity .25s;}
+.btn-ghost:hover{opacity:1;}
+
+/* Calendly */
+.calendly-nudge{margin-top:4rem;padding-top:3rem;border-top:1px solid #D4CEC7;opacity:0;transform:translateY(12px);transition:opacity .6s ease .75s,transform .6s ease .75s;}
+.calendly-nudge.in{opacity:1;transform:none;}
+
+/* Footer */
+footer{position:relative;z-index:1;padding:2rem 3rem;border-top:1px solid #D4CEC7;background:#141210;}
+footer .inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;}
+
+/* Decorative tile counter */
+.tile-count{position:fixed;right:3rem;bottom:3rem;z-index:2;display:flex;flex-direction:column;align-items:flex-end;gap:.35rem;}
+.tile-count-num{font-family:'Chillax',sans-serif;font-weight:700;font-size:2.5rem;color:#FF4ECD;line-height:1;letter-spacing:-.03em;}
+.tile-count-label{font-family:'Satoshi',sans-serif;font-size:.5rem;letter-spacing:.22em;text-transform:uppercase;color:#7A7169;}
+
+@media(max-width:768px){
+  body{cursor:auto;}
+  .cursor,.cursor-ring{display:none;}
+  a,button{cursor:pointer;}
+  nav{padding:1.25rem 1.5rem;}
+  .thanks-wrap{padding:8rem 1.5rem 4rem;}
+  .tile-count{right:1.5rem;bottom:1.5rem;}
+  footer{padding:2rem 1.5rem;}
+}
+</style>
+
+<!-- Calendly popup widget -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</head>
+<body>
+
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="ring"></div>
+
+<!-- Decorative tile grid background -->
+<div class="tile-bg" aria-hidden="true">
+  <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="tilePattern" x="0" y="0" width="18.5" height="18.5" patternUnits="userSpaceOnUse">
+        <rect x="0" y="0" width="16" height="16" rx="1.5" fill="none" stroke="#D4CEC7" stroke-width=".5" opacity=".5"/>
+      </pattern>
+    </defs>
+    <rect width="1440" height="900" fill="url(#tilePattern)"/>
+    <!-- Accent tiles — a cluster in the bottom-right -->
+    <rect x="1160" y="640" width="16" height="16" rx="1.5" fill="#FF4ECD" opacity=".12"/>
+    <rect x="1178.5" y="640" width="16" height="16" rx="1.5" fill="#FF4ECD" opacity=".07"/>
+    <rect x="1160" y="658.5" width="16" height="16" rx="1.5" fill="#FF4ECD" opacity=".07"/>
+    <rect x="1178.5" y="658.5" width="16" height="16" rx="1.5" fill="#FF4ECD" opacity=".04"/>
+    <rect x="1197" y="640" width="16" height="16" rx="1.5" fill="#141210" opacity=".04"/>
+    <rect x="1197" y="658.5" width="16" height="16" rx="1.5" fill="#141210" opacity=".03"/>
+  </svg>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1.2rem;color:#141210;text-decoration:none;">Grout &amp; Glory</a>
+  <div style="display:flex;align-items:center;gap:2.5rem;">
+    <a href="index.html#work" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Work</a>
+    <a href="index.html#services" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;" class="desk-link">Services</a>
+    <a href="index.html#contact" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Contact</a>
+    <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/groutandglory-analytics/30min'});return false;" style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#F2EDE6;padding:.75rem 2rem;text-decoration:none;">Book a Call</a>
+  </div>
+</nav>
+
+<main>
+  <div class="thanks-wrap">
+
+    <div class="section-label" id="sl">Message Received</div>
+
+    <h1 class="thanks-heading" id="th">
+      We've Got<br>
+      <em>Your Note.</em>
+    </h1>
+
+    <p class="thanks-body" id="tb">
+      Marcus will read this himself and get back to you within one business day. No auto-replies, no assistants — just Marcus.
+    </p>
+
+    <div class="thanks-divider" id="td"></div>
+
+    <div class="thanks-detail" id="tdt">
+      <div>What happens next <span>—</span></div>
+      <div>Marcus reviews your project details <span>&nbsp;/&nbsp;</span> Reaches out personally <span>&nbsp;/&nbsp;</span> Schedules a site visit</div>
+    </div>
+
+    <div class="thanks-actions" id="ta">
+      <a href="index.html" class="btn-primary">Back to Site &#8594;</a>
+      <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/groutandglory-analytics/30min'});return false;" class="btn-ghost">Or book a time now &#8594;</a>
+    </div>
+
+    <div class="calendly-nudge" id="cn">
+      <div style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;margin-bottom:1rem;">Rather talk now?</div>
+      <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/groutandglory-analytics/30min'});return false;" style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#FF4ECD;color:#141210;padding:1rem 2rem;text-decoration:none;display:inline-block;transition:opacity .2s;" onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">Book a 30-Min Call on Calendly &#8594;</a>
+    </div>
+
+  </div>
+</main>
+
+<!-- Tile count decoration -->
+<div class="tile-count" aria-hidden="true">
+  <div class="tile-count-num">340<span style="font-size:1.5rem;">+</span></div>
+  <div class="tile-count-label">Projects Completed</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="inner">
+    <div>
+      <div style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1.2rem;color:#F2EDE6;margin-bottom:.3rem;">Grout &amp; Glory Tile Co.</div>
+      <div style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Asheville, NC — Handcrafted Tile Installation</div>
+    </div>
+    <div style="display:flex;gap:2rem;">
+      <a href="index.html#work" style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Work</a>
+      <a href="index.html#services" style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Services</a>
+      <a href="index.html#contact" style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Contact</a>
+    </div>
+    <div style="font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:#3a3632;">Site by <a href="https://thewaydma.com" style="color:#3a3632;text-decoration:none;">The Way Digital</a></div>
+  </div>
+</footer>
+
+<script>
+// Animate in on load
+window.addEventListener('DOMContentLoaded', () => {
+  const els = ['th','tb','td','tdt','ta','cn'];
+  const delays = [0, 250, 420, 520, 620, 750];
+  els.forEach((id, i) => {
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if(el) el.classList.add('in');
+    }, delays[i]);
+  });
+});
+
+// Cursor
+const cur = document.getElementById('cur');
+const ring = document.getElementById('ring');
+if(cur && ring){
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cur.style.left = mx+'px'; cur.style.top = my+'px';
+  });
+  (function loop(){
+    rx += (mx-rx)*.12; ry += (my-ry)*.12;
+    ring.style.left = rx+'px'; ring.style.top = ry+'px';
+    requestAnimationFrame(loop);
+  })();
+  document.querySelectorAll('a,button').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('exp'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('exp'));
+  });
+}
+
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+</script>
+</body>
+</html>

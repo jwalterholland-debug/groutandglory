@@ -33,17 +33,18 @@
 <link rel="stylesheet" href="styles.css">
 <style>
 *{-webkit-font-smoothing:antialiased;box-sizing:border-box;margin:0;padding:0;}
-body{background:#F2EDE6;color:#141210;cursor:none;font-family:'Zodiak',serif;}
+body{background:#F2EDE6;color:#141210;cursor:none;font-family:'Zodiak',Georgia,'Times New Roman',serif;}
 .cursor{position:fixed;width:10px;height:10px;background:#FF4ECD;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s;}
 .cursor-ring{position:fixed;width:36px;height:36px;border:1px solid #FF4ECD;border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:0.5;transition:width .25s,height .25s,opacity .25s;}
 .cursor-ring.exp{width:56px;height:56px;opacity:0.2;}
 .section-label::before{content:'';display:inline-block;width:24px;height:1px;background:#FF4ECD;margin-right:1rem;vertical-align:middle;}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
-.reveal.visible{opacity:1;transform:none;}
+/* Reveal: only hidden when JS is active — fallback shows everything */
+.js-ready .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1!important;transform:none!important;}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 nav{transition:background .3s,border-color .3s;position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;}
 nav.scrolled{background:rgba(242,237,230,.94);backdrop-filter:blur(12px);border-bottom:1px solid #D4CEC7;}
-.hero-h1{font-size:clamp(54px,9vw,118px);line-height:.92;letter-spacing:-.03em;font-family:'Chillax',sans-serif;font-weight:700;}
+.hero-h1{font-size:clamp(54px,9vw,118px);line-height:.92;letter-spacing:-.03em;font-family:'Chillax','Arial Black',Impact,sans-serif;font-weight:700;}
 
 /* Tile animation */
 .tile-wrap{display:inline-block;vertical-align:baseline;position:relative;overflow:visible;margin-bottom:-0.08em;}
@@ -53,8 +54,8 @@ nav.scrolled{background:rgba(242,237,230,.94);backdrop-filter:blur(12px);border-
 @keyframes tileIn{0%{opacity:0;transform:translateY(-14px) scale(0.72);}55%{opacity:1;transform:translateY(3px) scale(1.06);}78%{transform:translateY(-1px) scale(0.975);}100%{opacity:1;transform:translateY(0) scale(1);}}
 .t-tile.scatter{animation:tileOut 0.5s cubic-bezier(0.4,0,1,1) forwards !important;}
 @keyframes tileOut{0%{opacity:1;transform:translateY(0) scale(1);}100%{opacity:0;transform:translateY(var(--dy)) translateX(var(--dx)) scale(0.3) rotate(var(--rot));}}
-.hl-line{display:block;opacity:0;transform:translateY(6px);transition:opacity 0.45s ease,transform 0.45s ease;}
-.hl-line.in{opacity:1;transform:none;}
+.js-ready .hl-line{display:block;opacity:0;transform:translateY(6px);transition:opacity 0.45s ease,transform 0.45s ease;}
+.hl-line.in{opacity:1!important;transform:none!important;}
 
 /* Swatch bands */
 .swatch-band{position:relative;overflow:hidden;height:200px;display:flex;align-items:center;border-bottom:1px solid #D4CEC7;transition:height .4s ease;cursor:none;}
@@ -63,8 +64,8 @@ nav.scrolled{background:rgba(242,237,230,.94);backdrop-filter:blur(12px);border-
 .swatch-band:hover .swatch-bg{filter:brightness(.52) saturate(.75);transform:scale(1.03);}
 .swatch-content{position:relative;z-index:2;display:flex;align-items:center;gap:2rem;width:100%;padding:0 3rem;}
 .swatch-num{font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;color:#FF4ECD;min-width:1.5rem;flex-shrink:0;}
-.swatch-title{font-family:'Chillax',sans-serif;font-weight:600;font-size:clamp(1.8rem,4.5vw,4rem);color:#F2EDE6;letter-spacing:-.02em;line-height:1;flex:1;}
-.swatch-cta{font-family:'Satoshi',sans-serif;font-size:.65rem;letter-spacing:.15em;color:#F2EDE6;opacity:0;transition:opacity .3s;flex-shrink:0;}
+.swatch-title{font-family:'Chillax','Arial Black',Impact,sans-serif;font-weight:600;font-size:clamp(1.8rem,4.5vw,4rem);color:#F2EDE6;letter-spacing:-.02em;line-height:1;flex:1;}
+.swatch-cta{font-family:'Satoshi',Arial,sans-serif;font-size:.65rem;letter-spacing:.15em;color:#F2EDE6;opacity:0;transition:opacity .3s;flex-shrink:0;}
 .swatch-band:hover .swatch-cta{opacity:.6;}
 
 /* Portfolio */
@@ -77,7 +78,7 @@ nav.scrolled{background:rgba(242,237,230,.94);backdrop-filter:blur(12px);border-
 /* Process */
 .process-line{position:absolute;top:0;left:0;width:0;height:2px;background:#FF4ECD;transition:width .4s;}
 .process-step:hover .process-line{width:100%;}
-.process-num{font-family:'Chillax',sans-serif;font-size:3.5rem;font-weight:700;color:#D4CEC7;line-height:1;transition:color .3s;margin-bottom:1.5rem;}
+.process-num{font-family:'Chillax','Arial Black',Impact,sans-serif;font-size:3.5rem;font-weight:700;color:#D4CEC7;line-height:1;transition:color .3s;margin-bottom:1.5rem;}
 .process-step:hover .process-num{color:#FF4ECD;}
 
 /* Mobile nav */
@@ -96,9 +97,9 @@ nav.scrolled{background:rgba(242,237,230,.94);backdrop-filter:blur(12px);border-
 .depart-slide.active{transform:translateY(0);opacity:1;}
 .depart-slide.above{transform:translateY(-100%);opacity:0;}
 .depart-slide.below{transform:translateY(100%);opacity:0;}
-.depart-num{font-family:'Chillax',sans-serif;font-weight:700;color:#FF4ECD;line-height:.9;letter-spacing:-.02em;}
-.depart-label{font-family:'Satoshi',sans-serif;font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:#7A7169;margin-top:.35rem;}
-.depart-copy{font-family:'Zodiak',serif;font-style:italic;color:#141210;line-height:1.3;}
+.depart-num{font-family:'Chillax','Arial Black',Impact,sans-serif;font-weight:700;color:#FF4ECD;line-height:.9;letter-spacing:-.02em;}
+.depart-label{font-family:'Satoshi',Arial,sans-serif;font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:#7A7169;margin-top:.35rem;}
+.depart-copy{font-family:'Zodiak',Georgia,'Times New Roman',serif;font-style:italic;color:#141210;line-height:1.3;}
 
 input,textarea{outline:none;transition:border-color .2s;}
 input:focus,textarea:focus{border-color:#FF4ECD!important;}
@@ -177,6 +178,9 @@ input:focus,textarea:focus{border-color:#FF4ECD!important;}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Grout & Glory Tile Co.","url":"https://www.groutandglory.com","address":{"@type":"PostalAddress","addressLocality":"Asheville","addressRegion":"NC"},"description":"Custom tile installation for high-end homes in Asheville, NC.","telephone":"+1-828-555-0191"}
 </script>
+<!-- Calendly popup widget -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body class="bg-linen text-ink font-zodiak leading-relaxed">
 
@@ -192,7 +196,7 @@ input:focus,textarea:focus{border-color:#FF4ECD!important;}
     <a href="#services" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Services</a>
     <a href="#process" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Process</a>
     <a href="#contact" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Contact</a>
-    <a href="#contact" style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#F2EDE6;padding:.75rem 2rem;text-decoration:none;">Book a Call</a>
+    <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/groutandglory-analytics/30min'});return false;" style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#F2EDE6;padding:.75rem 2rem;text-decoration:none;">Book a Call</a>
   </div>
   <button id="hbg" class="mob" style="flex-direction:column;gap:5px;padding:10px 12px;background:none;border:1px solid #D4CEC7;cursor:pointer;" aria-label="Open menu">
     <span style="display:block;width:22px;height:1px;background:#141210;"></span>
@@ -211,7 +215,7 @@ input:focus,textarea:focus{border-color:#FF4ECD!important;}
     <a href="#services" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Services</a>
     <a href="#process" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Process</a>
     <a href="#contact" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Contact</a>
-    <a href="#contact" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;background:#FF4ECD;color:#141210;padding:1rem 2rem;text-decoration:none;display:block;text-align:center;margin-top:.5rem;" onclick="cmnav()">Book a Call</a>
+    <a href="" onclick="cmnav();Calendly.initPopupWidget({url:'https://calendly.com/groutandglory-analytics/30min'});return false;" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;background:#FF4ECD;color:#141210;padding:1rem 2rem;text-decoration:none;display:block;text-align:center;margin-top:.5rem;">Book a Call</a>
   </div>
 </div>
 <div class="mob-overlay" id="movl" onclick="cmnav()"></div>
@@ -223,8 +227,8 @@ input:focus,textarea:focus{border-color:#FF4ECD!important;}
   <div class="hero-content" style="flex:1;display:flex;flex-direction:column;justify-content:center;max-width:62%;padding-right:2rem;">
     <div class="section-label reveal" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.35em;text-transform:uppercase;color:#7A7169;margin-bottom:2rem;display:flex;align-items:center;">Asheville, NC — Custom Tile Installation</div>
     <h1 class="hero-h1" id="heroHeadline">
-      <span id="hl-line1" style="display:block;"></span>
-      <em class="hl-line" id="hl-line2" style="color:#FF4ECD;font-style:italic;font-family:'Zodiak',serif;">Worth</em>
+      <span id="hl-line1" style="display:block;">Tile Work</span>
+      <em class="hl-line" id="hl-line2" style="color:#FF4ECD;font-style:italic;font-family:'Zodiak',Georgia,serif;">Worth</em>
       <span class="hl-line" id="hl-line3">Talking About.</span>
     </h1>
     <p class="reveal d2" style="font-size:.95rem;color:#7A7169;line-height:1.85;margin-top:2rem;max-width:400px;">Marcus Tully installs custom tile in Asheville's finest homes. Bathrooms, kitchens, showers, mosaics. One crew. No corners cut.</p>
@@ -240,7 +244,7 @@ input:focus,textarea:focus{border-color:#FF4ECD!important;}
     <div id="hero-cell-2" class="reveal d1 cta-cell" style="position:relative;overflow:hidden;padding:2rem 1.5rem;border-right:1px solid #D4CEC7;display:flex;flex-direction:column;gap:.75rem;justify-content:center;transition:background .35s ease;">
       <div class="cta-wipe" style="position:absolute;inset:0;background:#141210;transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.4,0,.2,1);pointer-events:none;"></div>
       <a href="#work" class="cta-primary" onclick="event.preventDefault();this.closest('.cta-cell').dispatchEvent(new MouseEvent('mouseenter'));setTimeout(()=>window.location.hash='#work',360);" style="position:relative;z-index:1;font-family:'Satoshi',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#F2EDE6;padding:.75rem 1rem;text-decoration:none;text-align:center;display:block;transition:background .35s,color .35s;">See Our Work</a>
-      <a href="#contact" class="cta-ghost" style="position:relative;z-index:1;font-family:'Satoshi',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#141210;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:.5rem;opacity:.55;transition:color .35s,opacity .35s;">Book a Call &#8594;</a>
+      <a href="" class="cta-ghost" onclick="Calendly.initPopupWidget({url:'https://calendly.com/groutandglory-analytics/30min'});return false;" style="position:relative;z-index:1;font-family:'Satoshi',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#141210;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:.5rem;opacity:.55;transition:color .35s,opacity .35s;">Book a Call &#8594;</a>
     </div>
 
     <!-- Cell 3 — departures board, plain linen -->
@@ -370,16 +374,17 @@ input:focus,textarea:focus{border-color:#FF4ECD!important;}
       <div class="reveal d3" style="display:flex;flex-direction:column;gap:1rem;margin-top:2.5rem;">
         <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;display:flex;align-items:center;gap:.75rem;cursor:default;" title="Prototype — link disabled"><span style="display:inline-block;width:16px;height:1px;background:#FF4ECD;"></span>marcus@groutandglory.com</span>
         <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;display:flex;align-items:center;gap:.75rem;cursor:default;" title="Prototype — link disabled"><span style="display:inline-block;width:16px;height:1px;background:#FF4ECD;"></span>(828) 555-0191</span>
-        <span style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#FF4ECD;color:#141210;padding:1rem 2rem;text-align:center;display:inline-block;margin-top:.5rem;opacity:.5;cursor:default;" title="Prototype — link disabled">Book a Call on Calendly &#8594;</span>
+        <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/groutandglory-analytics/30min'});return false;" style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#FF4ECD;color:#141210;padding:1rem 2rem;text-align:center;display:inline-block;margin-top:.5rem;text-decoration:none;">Book a Call on Calendly &#8594;</a>
       </div>
     </div>
     <div class="reveal d2">
-      <form style="display:flex;flex-direction:column;gap:1.5rem;">
-        <div style="display:flex;flex-direction:column;gap:.5rem;"><label style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Your Name</label><input type="text" placeholder="First & Last" style="background:transparent;border:none;border-bottom:1px solid #D4CEC7;border-radius:0;color:#141210;font-family:'Zodiak',serif;font-size:.9rem;padding:.75rem 0;width:100%;"></div>
-        <div style="display:flex;flex-direction:column;gap:.5rem;"><label style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Email Address</label><input type="email" placeholder="you@email.com" style="background:transparent;border:none;border-bottom:1px solid #D4CEC7;border-radius:0;font-family:'Zodiak',serif;font-size:.9rem;padding:.75rem 0;width:100%;color:#141210;"></div>
-        <div style="display:flex;flex-direction:column;gap:.5rem;"><label style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Project Type</label><input type="text" placeholder="e.g. Master bath, kitchen backsplash..." style="background:transparent;border:none;border-bottom:1px solid #D4CEC7;border-radius:0;font-family:'Zodiak',serif;font-size:.9rem;padding:.75rem 0;width:100%;color:#141210;"></div>
-        <div style="display:flex;flex-direction:column;gap:.5rem;"><label style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Tell Us About Your Project</label><textarea rows="4" placeholder="Space size, timeline, tile preferences..." style="background:transparent;border:none;border-bottom:1px solid #D4CEC7;border-radius:0;font-family:'Zodiak',serif;font-size:.9rem;padding:.75rem 0;width:100%;color:#141210;resize:none;"></textarea></div>
-        <button type="button" disabled style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#F2EDE6;padding:1rem 2rem;border:none;text-align:left;cursor:default;opacity:.5;" title="Prototype — link disabled">Send Message &#8594;</button>
+      <form name="contact" method="POST" data-netlify="true" action="/thanks.html" style="display:flex;flex-direction:column;gap:1.5rem;">
+        <input type="hidden" name="form-name" value="contact">
+        <div style="display:flex;flex-direction:column;gap:.5rem;"><label style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Your Name</label><input type="text" name="name" required placeholder="First & Last" style="background:transparent;border:none;border-bottom:1px solid #D4CEC7;border-radius:0;color:#141210;font-family:'Zodiak',serif;font-size:.9rem;padding:.75rem 0;width:100%;"></div>
+        <div style="display:flex;flex-direction:column;gap:.5rem;"><label style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Email Address</label><input type="email" name="email" required placeholder="you@email.com" style="background:transparent;border:none;border-bottom:1px solid #D4CEC7;border-radius:0;font-family:'Zodiak',serif;font-size:.9rem;padding:.75rem 0;width:100%;color:#141210;"></div>
+        <div style="display:flex;flex-direction:column;gap:.5rem;"><label style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Project Type</label><input type="text" name="project-type" placeholder="e.g. Master bath, kitchen backsplash..." style="background:transparent;border:none;border-bottom:1px solid #D4CEC7;border-radius:0;font-family:'Zodiak',serif;font-size:.9rem;padding:.75rem 0;width:100%;color:#141210;"></div>
+        <div style="display:flex;flex-direction:column;gap:.5rem;"><label style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Tell Us About Your Project</label><textarea rows="4" name="message" placeholder="Space size, timeline, tile preferences..." style="background:transparent;border:none;border-bottom:1px solid #D4CEC7;border-radius:0;font-family:'Zodiak',serif;font-size:.9rem;padding:.75rem 0;width:100%;color:#141210;resize:none;"></textarea></div>
+        <button type="submit" style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#F2EDE6;padding:1rem 2rem;border:none;text-align:left;cursor:pointer;">Send Message &#8594;</button>
       </form>
     </div>
   </div>
@@ -404,6 +409,10 @@ input:focus,textarea:focus{border-color:#FF4ECD!important;}
 </footer>
 
 <script>
+// Mark JS as active — enables opacity:0 on .reveal and .hl-line (fallback: everything visible)
+document.documentElement.classList.add('js-ready');
+document.body.classList.add('js-ready');
+
 // ── Tile headline animation ───────────────────────────────────────────────
 const TILE_SZ=14,GROUT=2.5,TILE_UNIT=TILE_SZ+GROUT,TILE_DELAY=52;
 const NS='http://www.w3.org/2000/svg';
@@ -488,8 +497,19 @@ function runTileHeadline(){
   primer.textContent='TW';
   document.body.appendChild(primer);
 
+  // Fallback: if font never loads (e.g. local preview), show plain text after 1.5s
+  const fontFallbackTimer = setTimeout(()=>{
+    if(document.getElementById('hl-line1') && !document.getElementById('hl-line1').textContent.trim()){
+      document.getElementById('hl-line1').textContent='Tile Work';
+    }
+    document.getElementById('hl-line2')?.classList.add('in');
+    document.getElementById('hl-line3')?.classList.add('in');
+    try{ document.body.removeChild(primer); }catch(e){}
+  }, 1500);
+
   document.fonts.load("700 200px 'Chillax'").then(()=>
   document.fonts.ready.then(()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    clearTimeout(fontFallbackTimer);
     document.body.removeChild(primer);
     const hl=document.getElementById('heroHeadline');
     const fs=parseFloat(getComputedStyle(hl).fontSize);
