@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K3YCBK1XMW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K3YCBK1XMW');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From the Field — Grout &amp; Glory Tile Co.</title>
+<meta name="description" content="Tile insights, project stories, and installation advice from Marcus Tully at Grout &amp; Glory — Asheville\`s custom tile studio.">
+<link rel="canonical" href="https://thewaydma.co/blog/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thewaydma.co/blog/">
+<meta property="og:title" content="From the Field — Grout & Glory Tile Co.">
+<meta property="og:description" content="Tile insights, project stories, and installation advice from Marcus Tully at Grout &amp; Glory.">
+<meta property="og:image" content="https://www.groutandglory.com/og-image.jpg">
+<meta property="og:site_name" content="Grout & Glory Tile Co.">
+<meta name="theme-color" content="#F2EDE6">
+<link rel="preload" href="/fonts/Chillax-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Satoshi-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<!-- Calendly popup widget -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<style>
+@font-face{font-family:'Chillax';src:url('/fonts/Chillax-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Chillax';src:url('/fonts/Chillax-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Chillax';src:url('/fonts/Chillax-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('/fonts/Zodiak-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('/fonts/Zodiak-Italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:'Zodiak';src:url('/fonts/Zodiak-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Satoshi';src:url('/fonts/Satoshi-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Satoshi';src:url('/fonts/Satoshi-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+
+*{-webkit-font-smoothing:antialiased;box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --linen:#F2EDE6;
+  --ink:#141210;
+  --pink:#FF4ECD;
+  --warm-grey:#7A7169;
+  --border:#D4CEC7;
+  --dark-linen:#E8E2DA;
+  --near-black:#1C1A18;
+}
+body{background:var(--linen);color:var(--ink);font-family:'Zodiak',Georgia,'Times New Roman',serif;}
+
+.section-label{font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.35em;text-transform:uppercase;color:var(--warm-grey);display:flex;align-items:center;gap:1rem;}
+.section-label::before{content:'';display:inline-block;width:24px;height:1px;background:var(--pink);flex-shrink:0;}
+
+/* ── Nav ── */
+nav{position:sticky;top:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(242,237,230,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.desk{display:flex;}
+.mob{display:none;}
+
+/* ── Mobile nav ── */
+.mobile-nav{position:fixed;top:0;right:-100%;width:min(320px,85vw);height:100vh;z-index:500;background:var(--near-black);border-left:1px solid #2E2B28;display:flex;flex-direction:column;transition:right .35s cubic-bezier(.4,0,.2,1);padding:2rem;}
+.mobile-nav.open{right:0;}
+.mob-overlay{display:none;position:fixed;inset:0;background:rgba(20,18,16,.5);z-index:400;}
+.mob-overlay.open{display:block;}
+
+/* ── Blog header ── */
+.blog-header{
+  padding:8rem 3rem 5rem;
+  border-bottom:1px solid var(--border);
+  background:var(--ink);
+  position:relative;
+  overflow:hidden;
+}
+.blog-header-inner{max-width:700px;}
+.blog-header-bg-text{
+  position:absolute;
+  right:-1rem;bottom:-2rem;
+  font-family:'Chillax',sans-serif;font-weight:700;
+  font-size:clamp(8rem,18vw,18rem);
+  line-height:.85;letter-spacing:-.04em;
+  color:rgba(255,255,255,.03);
+  pointer-events:none;user-select:none;
+  white-space:nowrap;
+}
+.blog-header-eyebrow{
+  font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.35em;text-transform:uppercase;
+  color:var(--pink);display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem;
+}
+.blog-header-eyebrow::before{content:'';display:inline-block;width:24px;height:1px;background:var(--pink);}
+.blog-header-title{
+  font-family:'Chillax',sans-serif;font-weight:700;
+  font-size:clamp(3rem,8vw,7rem);
+  line-height:.92;letter-spacing:-.035em;
+  color:var(--linen);
+  margin-bottom:1.75rem;
+}
+.blog-header-title em{color:var(--pink);font-style:italic;font-family:'Zodiak',Georgia,serif;}
+.blog-header-desc{
+  font-family:'Zodiak',Georgia,serif;
+  font-style:italic;font-size:1rem;
+  color:var(--warm-grey);line-height:1.85;
+  max-width:480px;
+}
+
+/* ── Card grid ── */
+.blog-grid-section{padding:5rem 3rem 7rem;}
+.blog-grid-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:1rem;}
+.blog-grid-count{
+  font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--warm-grey);
+}
+.blog-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--border);
+}
+
+/* ── Footer ── */
+footer{padding:3rem;background:var(--near-black);border-top:1px solid var(--border);}
+footer .inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  .blog-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:768px){
+  html,body{overflow-x:hidden;}
+  .desk{display:none!important;}
+  .mob{display:flex!important;}
+  nav{padding:1.25rem 1.5rem;}
+  .blog-header{padding:6rem 1.5rem 4rem;}
+  .blog-grid-section{padding:3rem 1.5rem 5rem;}
+  .blog-grid{grid-template-columns:1fr;}
+  footer{padding:2.5rem 1.5rem;}
+}
+@media(min-width:769px){.mob{display:none!important;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="https://www.groutandglory.com/" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1.2rem;color:var(--linen);text-decoration:none;" class="desk">Grout &amp; Glory</a>
+  <a href="https://www.groutandglory.com/" style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1rem;color:var(--linen);text-decoration:none;" class="mob">Grout &amp; Glory</a>
+  <div class="desk" style="display:flex;align-items:center;gap:2.5rem;">
+    <a href="https://www.groutandglory.com/#work" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(242,237,230,.55);text-decoration:none;">Work</a>
+    <a href="https://www.groutandglory.com/#services" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(242,237,230,.55);text-decoration:none;">Services</a>
+    <a href="https://www.groutandglory.com/#process" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(242,237,230,.55);text-decoration:none;">Process</a>
+    <a href="/blog/" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);text-decoration:none;">Field Notes</a>
+    <a href="https://www.groutandglory.com/#contact" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(242,237,230,.55);text-decoration:none;">Contact</a>
+    <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/groutandglory-analytics/30min'});return false;" style="font-family:'Satoshi',sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;background:var(--linen);color:var(--ink);padding:.75rem 2rem;text-decoration:none;">Book a Call</a>
+  </div>
+  <button id="hbg" class="mob" style="flex-direction:column;gap:5px;padding:10px 12px;background:none;border:1px solid rgba(242,237,230,.2);cursor:pointer;" aria-label="Open menu">
+    <span style="display:block;width:22px;height:1px;background:#F2EDE6;"></span>
+    <span style="display:block;width:22px;height:1px;background:#F2EDE6;"></span>
+    <span style="display:block;width:14px;height:1px;background:#F2EDE6;"></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mnav">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3rem;">
+    <span style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1.2rem;color:#F2EDE6;">Grout &amp; Glory</span>
+    <button id="cnav" style="font-family:'Satoshi',sans-serif;font-size:.9rem;color:#7A7169;background:none;border:none;cursor:pointer;" aria-label="Close">&#x2715;</button>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:1.5rem;">
+    <a href="https://www.groutandglory.com/#work" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Work</a>
+    <a href="https://www.groutandglory.com/#services" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Services</a>
+    <a href="https://www.groutandglory.com/#process" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Process</a>
+    <a href="/blog/" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#FF4ECD;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Field Notes</a>
+    <a href="https://www.groutandglory.com/#contact" style="font-family:'Chillax',sans-serif;font-size:1.5rem;font-weight:600;color:#F2EDE6;text-decoration:none;border-bottom:1px solid #2E2B28;padding-bottom:1.5rem;" onclick="cmnav()">Contact</a>
+    <a href="" onclick="cmnav();Calendly.initPopupWidget({url:'https://calendly.com/groutandglory-analytics/30min'});return false;" style="font-family:'Satoshi',sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;background:#FF4ECD;color:#141210;padding:1rem 2rem;text-decoration:none;display:block;text-align:center;margin-top:.5rem;">Book a Call</a>
+  </div>
+</div>
+<div class="mob-overlay" id="movl" onclick="cmnav()"></div>
+
+<main>
+
+  <!-- BLOG HEADER -->
+  <section class="blog-header">
+    <div class="blog-header-bg-text">Notes</div>
+    <div class="blog-header-inner">
+      <div class="blog-header-eyebrow">Grout & Glory Tile Co.</div>
+      <h1 class="blog-header-title">From the Field</h1>
+      <p class="blog-header-desc">Tile insights, project stories, and honest installation advice — straight from the job site.</p>
+    </div>
+  </section>
+
+  <!-- CARD GRID -->
+  <section class="blog-grid-section">
+    <div class="blog-grid-header">
+      <div class="section-label">All Posts</div>
+    </div>
+    <div class="blog-grid">
+      <a href="/blog/bathroom-remodel-mistakes-knoxville-homeowners/" style="text-decoration:none;color:inherit;display:block;background:#F2EDE6;transition:background .3s ease;">
+  <div style="overflow:hidden;aspect-ratio:16/9;background:#1C1A18;">
+    <img src="/blog/bathroom-remodel-mistakes-knoxville-homeowners/hero.webp" alt="Knoxville bathroom remodel in progress showing construction materials and planning elements" loading="lazy" width="600" height="338" style="width:100%;aspect-ratio:16/9;object-fit:cover;">
+  </div>
+  <div style="padding:1.75rem 2rem 2rem;">
+    <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:1rem;">
+      <span style="font-family:'Satoshi',sans-serif;font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:#FF4ECD;">Bathroom Remodel Tips</span>
+      <span style="display:inline-block;width:3px;height:3px;border-radius:50%;background:#D4CEC7;flex-shrink:0;"></span>
+      <span style="font-family:'Satoshi',sans-serif;font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;color:#7A7169;">May 2026</span>
+    </div>
+    <h2 style="font-family:'Chillax','Arial Black',sans-serif;font-weight:700;font-size:clamp(1.1rem,2vw,1.4rem);line-height:1.1;letter-spacing:-.025em;color:#141210;margin-bottom:.75rem;">7 Costly Bathroom Remodel Mistakes Knoxville Homeowners Make (And How to Avoid Them)</h2>
+    <p style="font-family:'Zodiak',Georgia,serif;font-style:italic;font-size:.9rem;line-height:1.75;color:#7A7169;margin-bottom:1.25rem;">Planning your bathroom renovation? Don't let these common mistakes turn your dream remodel into a costly nightmare. Learn what Knoxville homeowners wish they knew before starting.</p>
+    <span style="font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:#141210;display:flex;align-items:center;gap:.5rem;border-top:1px solid #D4CEC7;padding-top:1.25rem;">Read Article →</span>
+  </div>
+</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="inner">
+    <div>
+      <div style="font-family:'Chillax',sans-serif;font-weight:600;font-size:1.2rem;color:#F2EDE6;margin-bottom:.3rem;">Grout &amp; Glory Tile Co.</div>
+      <div style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;">Asheville, NC — Handcrafted Tile Installation</div>
+    </div>
+    <div style="display:flex;gap:2rem;">
+      <a href="https://www.groutandglory.com/#work" style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Work</a>
+      <a href="https://www.groutandglory.com/#services" style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Services</a>
+      <a href="/blog/" style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Field Notes</a>
+      <a href="https://www.groutandglory.com/#contact" style="font-family:'Satoshi',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#7A7169;text-decoration:none;">Contact</a>
+    </div>
+    <div style="font-family:'Satoshi',sans-serif;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:#3a3632;">Site by <a href="https://thewaydma.com" style="color:#3a3632;text-decoration:none;">The Way Digital</a></div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+const hbg=document.getElementById('hbg'),mnav=document.getElementById('mnav'),movl=document.getElementById('movl'),cnav=document.getElementById('cnav');
+function omnav(){mnav.classList.add('open');movl.classList.add('open');document.body.style.overflow='hidden';}
+function cmnav(){mnav.classList.remove('open');movl.classList.remove('open');document.body.style.overflow='';}
+if(hbg)hbg.addEventListener('click',omnav);
+if(cnav)cnav.addEventListener('click',cmnav);
+document.querySelectorAll('a[href*="calendly.com"]').forEach(function(link){link.addEventListener('click',function(){if(typeof gtag!=='undefined')gtag('event','calendly_click',{event_category:'engagement',event_label:link.href});});});
+</script>
+</body>
+</html>
